@@ -1,0 +1,3 @@
+<?php
+    $TITLE = "México Mágico";
+?>
