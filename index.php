@@ -101,7 +101,7 @@
                                 <a href="../portal/acerca_de.php">Acerca de</a>
                             </li> -->
                             <li>
-                                <a href="../portal/login.php">Login</a>
+                                <a href="./portal/login.php">Login</a>
                             </li>
                         </ul>
                     </div>
