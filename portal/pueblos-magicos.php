@@ -110,7 +110,7 @@
 																	</div>
 																	<div class="hover-item-caption smoothie">
 																			<div class="vertical-center smoothie">
-																					<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">z Nombre aqui z</a></h3>
+																					<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">'.$row[1].'</a></h3>
 																					<a href="./pueblo_magico.php?id='.$row[0].'" class="smoothie btn btn-primary">Ver más</a>
 																			</div>
 																	</div>
