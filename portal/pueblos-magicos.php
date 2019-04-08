@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-		
+
     <link rel="shortcut icon" href="../recursos-portal/imagenes/favicon.jpg">
 
         <title><?php echo $TITLE;?></title>
@@ -45,9 +45,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-											
-											<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
-                      <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
+                    <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
+                    <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +59,7 @@
                         <a href="./portal/login.php">Login</a>
 											<li><a href="#search"><i class="pe-7s-search"></i></a></li>
                     </ul>
-										
+
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -77,7 +76,7 @@
             </div>
         </div>
 				<?php
-					
+
 				?>
         <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header-pueblo.jpg" data-speed="0.7">
             <div class="section-inner pad-top-200">
