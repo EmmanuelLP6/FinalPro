@@ -1,3 +1,7 @@
+<?php
+	include("../adm/conexion.php");
+	//$id=$_GET['id_pueblo'];	
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,15 +45,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand smoothie logo logo-light" href="index.html"><img src="../recursos-portal/plantilla base/assets/img/logo.png" alt="logo"></a>
-                    <a class="navbar-brand smoothie logo logo-dark" href="index.html"><img src="../recursos-portal/plantilla base/assets/img/logo_reverse.png" alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" height="70px"  alt="logo"></a>
+                    <a class="navbar-brand smoothie logo logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" height="70px"  alt="logo"></a>
                 </div>
             </div>
         </nav>
 
        
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/plantilla base/assets/img/bg/bg2.jpg" data-speed="0.7">
+        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header2.jpg" data-speed="0.7">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
@@ -73,18 +77,6 @@
                                         <a class="lb-link" data-rel="product-gallery" href="assets/img/shop/product1.jpg" title="Image Title">
                                             <img alt="Image Title" class="img-responsive" src="../recursos-portal/plantilla base/assets/img/shop/product1.jpg" title="Image Title">
                                         </a>
-
-                                        <div class="thumbnails mt">
-                                            <a class="lb-link" data-rel="product-gallery" href="../recursos-portal/plantilla base/assets/img/shop/product2.jpg" title="Image Title 2">
-                                                <img alt="image title" height="100" width="100" src="../recursos-portal/plantilla base/assets/img/shop/product2.jpg">
-                                            </a>
-                                            <a class="lb-link" data-rel="product-gallery" href="../recursos-portal/plantilla base/assets/img/shop/product3.jpg" title="Image Title 2">
-                                                <img alt="image title" height="100" width="100" src="../recursos-portal/plantilla base/assets/img/shop/product3.jpg">
-                                            </a>
-                                            <a class="lb-link" data-rel="product-gallery" href="../recursos-portal/plantilla base/assets/img/shop/product4.jpg" title="Image Title 2">
-                                                <img alt="image title" height="100" width="100" src="../recursos-portal/plantilla base/assets/img/shop/product4.jpg">
-                                            </a>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -93,8 +85,6 @@
 
                                         <div>
                                             <p class="price">
-                                                <del><span class="amount">£3.00</span>
-                                                </del>
                                                 <ins><span class="amount">£2.00</span>
                                                 </ins>
                                             </p>
@@ -105,37 +95,18 @@
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-md-12 product-tabs mt">
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a data-toggle="tab" href="#tab-description">Description</a>
-                                        </li>
-                                    </ul>
-
-                                    <div class="tab-content mb">
-                                        <div class="tab-pane active" id="tab-description">
-                                            <p>On insensible possession oh particular attachment at excellence in. The books arose but miles happy she. It building contempt or interest children mistress of unlocked no. Offending she contained mrs led listening resembled. Delicate marianne absolute men dashwood landlord and offended. Suppose cottage between and way. Minuter him own clothes but observe country. Agreement far boy otherwise rapturous.</p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                         <div id="main-sidebar" class="col-md-3 col-md-offset-1 divider-wrapper wow fadeIn" data-wow-delay="0.5s">
                             <div>
                                 <div class="widget">
-                                    <h4 class="widget-title"><strong>Latest</strong> Products</h4>
+                                    <h4 class="widget-title"><strong>Los visitantes </strong> Clasificaron</h4>
                                     <div>
                                         <div class="media">
-                                            <div class="pull-left">
-                                                <img class="widget-img" src="assets/img/widget/widget1.jpg" alt="">
-                                            </div>
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Cool T-Shirt</a></span>
+                                                <span class="media-heading"><a class="coloured">Presentación</a></span>
                                                 <div class="muted">
                                                     <ul class="list-unstyled">
-                                                        <li><a href="#" title="">$14.99</a>
-                                                        </li>
                                                         <li>
                                                             <span class="glyphicon glyphicon-star"></span>
                                                             <span class="glyphicon glyphicon-star"></span>
@@ -148,15 +119,10 @@
                                             </div>
                                         </div>
                                         <div class="media">
-                                            <div class="pull-left">
-                                                <img class="widget-img" src="assets/img/widget/widget2.jpg" alt="">
-                                            </div>
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Nice Jeans</a></span>
+                                                <span class="media-heading"><a class="coloured">Sabor</a></span>
                                                 <div class="muted">
                                                     <ul class="list-unstyled">
-                                                        <li><a href="#" title="">$14.99</a>
-                                                        </li>
                                                         <li>
                                                             <span class="glyphicon glyphicon-star"></span>
                                                             <span class="glyphicon glyphicon-star"></span>
@@ -169,36 +135,10 @@
                                             </div>
                                         </div>
                                         <div class="media">
-                                            <div class="pull-left">
-                                                <img class="widget-img" src="assets/img/widget/widget3.jpg" alt="">
-                                            </div>
                                             <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Snazzy Hat</a></span>
+                                                <span class="media-heading"><a class="coloured">Precio</a></span>
                                                 <div class="muted">
                                                     <ul class="list-unstyled">
-                                                        <li><a href="#" title="">$14.99</a>
-                                                        </li>
-                                                        <li>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="widget-img" src="assets/img/widget/widget4.jpg" alt="">
-                                            </div>
-                                            <div class="media-body">
-                                                <span class="media-heading"><a class="coloured" href="#">Warm Socks</a></span>
-                                                <div class="muted">
-                                                    <ul class="list-unstyled">
-                                                        <li><a href="#" title="">$14.99</a>
-                                                        </li>
                                                         <li>
                                                             <span class="glyphicon glyphicon-star"></span>
                                                             <span class="glyphicon glyphicon-star"></span>
