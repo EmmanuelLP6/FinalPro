@@ -95,6 +95,7 @@
             </div>
         </section>
 
+
         <section class="white-bg">
             <div class="section-inner">
                 <div class="container">
@@ -115,7 +116,94 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="section-inner">
+                <div class="container">
+                    <div class="row">
 
+                        <div class="col-sm-4 blog-item mb100 wow match-height">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="hover-item mb30">
+                                        <img src="assets/img/news/1.jpg" class="img-responsive smoothie" alt="title">
+                                        <div class="overlay-item-caption smoothie"></div>
+                                        <div class="hover-item-caption smoothie">
+                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
+                                        </div>
+                                    </div>
+                                    <h2 class="post-title">The Ultimate Experience</h2>
+                                    <div class="item-metas text-muted mb30">
+                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
+                                    </div>
+                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
+                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 blog-item mb100 wow match-height">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="hover-item mb30">
+                                        <img src="assets/img/news/2.jpg" class="img-responsive smoothie" alt="title">
+                                        <div class="overlay-item-caption smoothie"></div>
+                                        <div class="hover-item-caption smoothie">
+                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
+                                        </div>
+                                    </div>
+                                    <h2 class="post-title">The Ultimate Experience</h2>
+                                    <div class="item-metas text-muted mb30">
+                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
+                                    </div>
+                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
+                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 blog-item mb100 wow match-height">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="hover-item mb30">
+                                        <img src="../img/ar11.jpg" class="img-responsive smoothie" alt="title">
+                                        <div class="overlay-item-caption smoothie"></div>
+                                        <div class="hover-item-caption smoothie">
+                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
+                                        </div>
+                                    </div>
+                                    <h2 class="post-title">The Ultimate Experience</h2>
+                                    <div class="item-metas text-muted mb30">
+                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
+                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
+                                    </div>
+                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
+                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="row paging text-center">
+                        <a class="btn btn-primary mt30" href="#">Older Posts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <footer class="white-wrapper">
             <div class="container">
