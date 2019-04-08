@@ -45,7 +45,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-											<img src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a>
+											
+											<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
+                      <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -95,13 +97,12 @@
                     <div>
                         <ul class="portfolio-items nopadding-lr isotope list-unstyled">
                             <li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
-                                <img src="assets/img/portfolio/portfolio1.jpg" class="img-responsive smoothie" alt="">
+                                <img src="../recursos-portal/imagenes/p1.jpg" class="img-responsive smoothie" alt="">
                                 <div class="overlay-item-caption smoothie"></div>
                                 <div class="hover-item-caption smoothie">
                                     <div class="vertical-center smoothie">
-                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project">Fullscreen Gallery</a></h3>
-                                        <a href="assets/img/portfolio/portfolio1.jpg" title="View Gallery" class="btn btn-primary lb-link smoothie">Zoom</a>
-                                        <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">View</a>
+                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"></a></h3>
+                                        <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">Ver más</a>
                                     </div>
                                 </div>
                             </li>
