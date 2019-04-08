@@ -1,6 +1,8 @@
 <?php
 	include("../adm/conexion.php");
-	//$id=$_GET['id_pueblo'];	
+	//$id=$_GET['id_pueblo'];
+	$id=$_GET['id'];
+	$query='select pueblo.*, platillo.*,artesania.* from pueblo inner join platillo inner join artesania where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and pueblo.id_pueblo='.$id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +17,7 @@
     <link rel="shortcut icon" href="../recursos-portal/plantilla base/assets/img/ico/favicon.ico">
 
 
-    <title>Comida</title>
+    <title><?php echo ; ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../recursos-portal/plantilla base/assets/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +53,7 @@
             </div>
         </nav>
 
-       
+
 
         <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header2.jpg" data-speed="0.7">
             <div class="section-inner pad-top-200">

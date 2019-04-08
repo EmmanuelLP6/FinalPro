@@ -109,8 +109,19 @@
                                         <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"></a></h3>
                                         <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">Ver más</a>
                                     </div>
+
                                 </div>
+
                             </li>
+                            <h2 class="post-title">The Ultimate Experience</h2>
+                            <div class="item-metas text-muted mb30">
+                                <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
+                                <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
+                                <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
+                                <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
+                            </div>
+                            <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
+                            <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
                         </ul>
                     </div>
                 </div>
