@@ -47,8 +47,8 @@
                         <span class="icon-bar"></span>
                     </button>
 											
-											<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
-                      <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
+											<a class="navbar-brand logo-light" href="../"><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
+                      <a class="navbar-brand logo-dark" href="../"><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -84,7 +84,7 @@
         <section class="white-bg">
             <div class="section-inner">
                 <div class="container">
-                    <div id="users">
+                    <div>
 												<?php
 													$query="select * from pueblo;";
 													$query_result= mysqli_query($conexion,$query);
@@ -110,7 +110,7 @@
 																	</div>
 																	<div class="hover-item-caption smoothie">
 																			<div class="vertical-center smoothie">
-																					<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">z Nombre aqui z</a></h3>
+																					<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">'.$row[1].'</a></h3>
 																					<a href="./pueblo_magico.php?id='.$row[0].'" class="smoothie btn btn-primary">Ver más</a>
 																			</div>
 																	</div>

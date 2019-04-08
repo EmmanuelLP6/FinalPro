@@ -55,7 +55,7 @@
 
 
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header2.jpg" data-speed="0.7">
+        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header2_2.jpg" data-speed="0.7">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
@@ -75,9 +75,19 @@
                             <div class="row">
                                 <div class="col-xs-12 col-sm-6 mb50">
                                     <div class="images">
-                                        <span class="onsale">Comida1</span>
-                                        <a class="lb-link" data-rel="product-gallery" href="assets/img/shop/product1.jpg" title="Image Title">
-                                            <img alt="Image Title" class="img-responsive" src="../recursos-portal/plantilla base/assets/img/shop/product1.jpg" title="Image Title">
+										<?php
+											$consulta="SELECT platillo.nombre_platillo, platillo.preparacion, platillo.imagen_platillo from Pueblo inner join platillo where pueblo.id_platillo=platillo.id_platillo and id_pueblo=21";
+											$query = mysqli_query($conexion,$consulta);
+											if (mysqli_num_rows($query)>0) {
+												$data = mysqli_fetch_array($query);
+												$_SESSION['nombrep'] = $data['nombre_platillo'];
+												$_SESSION['platillop'] = $data['preparacion'];
+												$_SESSION['img'] = $data['imagen_platillo'];
+											}
+										?>
+                                        <span class="onsale"><?php echo $_SESSION['nombrep']; ?></span>
+                                        <a class="lb-link" data-rel="product-gallery" href="assets/img/shop/product1.jpg">
+                                            <img alt="Image Title" class="img-responsive" src="../<?php echo $_SESSION['img']?>" title="Image Title">
                                         </a>
                                     </div>
                                 </div>
@@ -87,13 +97,13 @@
 
                                         <div>
                                             <p class="price">
-                                                <ins><span class="amount">£2.00</span>
+                                                <ins><span class="amount"><?php echo $_SESSION['nombrep']; ?></span>
                                                 </ins>
                                             </p>
                                         </div>
 
                                         <div class="lead">
-                                            <p>On insensible possession oh particular attachment at excellence in. The books arose but miles happy she. It building contempt or interest children mistress of unlocked no. Offending she contained mrs led listening resembled. Delicate marianne absolute men dashwood landlord and offended. Suppose cottage between and way. Minuter him own clothes but observe country. Agreement far boy otherwise rapturous incommode favourite.</p>
+                                            <p><?php echo $_SESSION['platillop']; ?></p>
                                         </div>
                                     </div>
                                 </div>
