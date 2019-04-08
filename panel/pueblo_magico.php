@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include('../adm/conexion.php');
   if (!isset($_SESSION['sesvar'])) {
     echo '
       <script>
@@ -39,12 +40,18 @@
     <!-- Custom Theme Style -->
     <link href="./build/css/custom.min.css" rel="stylesheet">
 
+    <!-- PNotify -->
+    <!-- <link href="./vendors/pnotify/dist/pnotify.css" rel="stylesheet"> -->
+    <!-- <link href="./vendors/pnotify/dist/pnotify.buttons.css" rel="stylesheet"> -->
+    <!-- <link href="./vendors/pnotify/dist/pnotify.nonblock.css" rel="stylesheet"> -->
+
     <!-- Datatables -->
     <link href="./vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="./vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="./vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="./vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="./vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
   </head>
 
   <body class="nav-md">
@@ -135,14 +142,22 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Users <small>Some examples to get you started</small></h3>
+                <h3>Pueblos Mágicos <small></small></h3>
               </div>
               <div class="clearfix"></div>
               <div class="row">
                 <div class="col-md-12 col-sm-12 col-xs-12">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Default Example <small><a href="#" type="button" class="btn btn-default submit">sdfsdfsd</a></small></h2>
+                      <h2>Nuestros pueblos magicos<small>
+                        <a href="#" type="button" class="btn btn-default submit">sdfsdfsd</a></small>
+                        <!-- <button class="btn btn-default source" onclick="new PNotify({
+                                  title: 'Regular Success',
+                                  text: 'That thing that you were trying to do worked!',
+                                  type: 'success',
+                                  styling: 'bootstrap3'
+                              });">Success</button> -->
+                      </h2>
                       <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
@@ -150,28 +165,21 @@
                       <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
                           <tr>
-                            <th>First name</th>
-                            <th>Last name</th>
-                            <th>Position</th>
-                            <th>Office</th>
-                            <th>Age</th>
-                            <th>Start date</th>
-                            <th>Salary</th>
-                            <th>Extn.</th>
-                            <th>E-mail</th>
+                            <th>No.</th>
+                            <th>Pueblo mágico</th>
+                            <th>Estado </th>
+                            <th>Opcion</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                           <td>Tiger</td>
-                           <td>Nixon</td>
-                           <td>System Architect</td>
-                           <td>Edinburgh</td>
-                           <td>61</td>
-                           <td>2011/04/25</td>
-                           <td>$320,800</td>
-                           <td>5421</td>
-                           <td>t.nixon@datatables.net</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                             <a href="#" type="button" class="btn btn-default submit">Actulizar</a></small>
+                             <a href="#" type="button" class="btn btn-default submit">Eliminar</a></small>
+                           </td>
                           </tr>
                         </tbody>
                       </table>
@@ -235,6 +243,11 @@
 
     <!-- Custom Theme Scripts -->
     <script src="./build/js/custom.min.js"></script>
+
+    <!-- PNotify -->
+    <!-- <script src="./vendors/pnotify/dist/pnotify.js"></script> -->
+    <!-- <script src="./vendors/pnotify/dist/pnotify.buttons.js"></script> -->
+    <!-- <script src="./vendors/pnotify/dist/pnotify.nonblock.js"></script> -->
 
     <!-- Datatables -->
     <script src="./vendors/datatables.net/js/jquery.dataTables.min.js"></script>

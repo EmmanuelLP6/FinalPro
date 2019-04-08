@@ -1,16 +1,17 @@
 <?php
+    include './adm/conexion.php';
     include './recursos-portal/librerias/constantes.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf8">
         <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <link rel="shortcut icon" href="./recursos-portal/imagenes/favicon.jpg">
+        <link rel="shortcut icon" href="./recursos-portal/imagenes/mexico.png">
 
         <title><?php echo $TITLE;?></title>
 
@@ -39,35 +40,6 @@
 
             <!-- Navigation -->
             <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
-                <!--<div class="top-bar smoothie hidden-xs">
-                    <div class="container">
-
-                        <div class="clearfix">
-                            <ul class="list-inline social-links wow pull-left">
-                                <li>
-                                    <a href="https://www.youtube.com/channel/UClQ7H3KijHPshi4FlJxR6yA" target="_blank"><i class="fa fa-youtube-play"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/bytevolution/" target="_blank"><i class="fa fa-instagram"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://web.facebook.com/BytEvolution-1632624076840156/?modal=admin_todo_tour" target="_blank"><i class="fa fa-facebook"></i></a>
-                                </li>
-                            </ul>
-                            <div class="pull-right text-right">
-                                <ul class="list-inline">
-                                    <li>
-                                        <div><i class="fa fa-envelope-o"></i> bytevolution40@gmail.com</div>
-                                    </li>
-                                    <li>
-                                        <div class="meta-item"><i class="fa fa-mobile"></i> +44 8780 648 605</div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>-->
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header page-scroll">
@@ -77,8 +49,8 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand smoothie logo logo-light" href="."><font color="white"><?php echo $TITLE;?></font></a>
-                        <a class="navbar-brand smoothie logo logo-dark" href="."><font color="black"><?php echo $TITLE;?></font></a>
+                        <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a>
+                        <a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -87,21 +59,8 @@
                             <li>
                                 <a href=".">Inicio</a>
                             </li>
-                            <!-- <li>
-                                <a href="../portal/producto.php">Producto</a>
-                            </li>
                             <li>
-                                <a href="../portal/contacto.php">Contacto</a>
-                            </li>
-                            <li>
-                                <a href="../portal/preguntas_frecuentes.php">Preguntas frecuentes</a>
-                            </li>
-
-                            <li>
-                                <a href="../portal/acerca_de.php">Acerca de</a>
-                            </li> -->
-                            <li>
-                                <a href="./portal/login.php">Login</a>
+                                <a href="../portal/login.php">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -125,15 +84,76 @@
                 <div class="container vertical-center">
                     <div class="intro-text vertical-center text-left smoothie">
                         <div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s">Bienvenido a <?php echo $TITLE;?></div>
-                        <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">Conoce más sobre <span class="rotate">Aguascalientes, Tlaxcala, Tamaulipas, Tijuana</span></div>
+                        <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">Conoce más sobre <span class="rotate">
+                            <?php
+                            $sql = 'SELECT * FROM estado ORDER BY nombre_estado';
+                            $r_sql = mysqli_query($conect,$sql);
+                            $num = mysqli_num_rows($r_sql);
+                            $cont = 0;
+                            while (($row = mysqli_fetch_array($r_sql))!=null) {
+                                if($cont++ == $num-1){
+                                    echo $row['nombre_estado'];
+                                }
+                                else{
+                                    echo $row['nombre_estado'].', ';
+                                }
+                            }
+                            ?>
+                        </span></div>
                     </div>
                 </div>
             </header>
             <!-- End header -->
 
+            <!-- Encabezado de la seccion del principal -->
+            <div class="col-lg-12 mt30 wow text-center animated">
+                <h2 class="section-subheading">Principales pueblos mágicos</h2>
+                <br>
+            </div>
 
+            <section class="dark-wrapper opaqued no-overlay parallax" data-parallax="scroll" data-image-src="./recursos-portal/imagenes/fondo.jpg" data-speed="0.001">
+                <div class="section-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-12 match-height">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <ul class="owl-carousel-paged testimonial-owl wow fadeIn list-unstyled" data-items="4" data-items-tablet="[768,2]" data-items-mobile="[479,1]">
+                                            <!-- Elemento Carrousel -->
+                                            <?php
+                                            $sql = 'SELECT pueblo.id_pueblo, pueblo.nombre_prueblo as nombre, pueblo.img1 as imagen, razon.descripicion as descripcion FROM pueblo, razon WHERE razon.id_pueblo=pueblo.id_pueblo and  estatus = 1;';
+                                            $r_result = mysqli_query($conect,$sql);
+                                            $num = mysqli_num_rows($r_result);
+                                            while (($row = mysqli_fetch_array($r_result))!=null) {
+                                                echo '
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <div class="icon-box-1 match-height mb30">
+                                                                <img src = "./recursos-portal/imagenes/'.$row['imagen'].'" class="img-responsive smoothie">
+                                                                <div class="content-area text-center">
+                                                                    <h3 class="title">'.$row['nombre'].'</h3>
+                                                                    <div>'.$row['descripcion'].'</div>
+                                                                    <a href = "">Ver más</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
 
+                                                    </div>
+                                                </li>
+                                                ';
+                                            }
+                                            ?>
+                                            <!-- End Elemento Carrousel -->
 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
 
@@ -162,54 +182,16 @@
                     <div class="section-inner">
                         <div class="container">
                             <div class="row">
-                                <div class="col-md-4">
+                                <div class="col-md-6 text-center">
                                     <div class="widget about-us-widget">
-                                        <h4 class="widget-title"><strong>Global</strong> Coverage</h4>
-                                        <p>Professionally monetize team building materials for 24/7 results. Holisticly transition corporate platforms vis-a-vis cutting-edge experiences. Dynamically strategize ubiquitous applications for premier initiatives. Interactively seize resource sucking niche markets.</p>
+                                        <h4 class="widget-title"><strong>Platillos</strong> típicos</h4>
+                                        <p class="lead">Conoce el platillo principal de cada pueblo mágico, siendo un deleite único para el paladar.</p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6 text-center">
                                     <div class="widget">
-                                        <h4 class="widget-title"><strong>Latest</strong> Articles</h4>
-                                        <div>
-                                            <div class="media">
-                                                <div class="pull-left">
-                                                    <img class="widget-img" src="./recursos-portal/imagenes/widget/widget1.jpg" alt="">
-                                                </div>
-                                                <div class="media-body">
-                                                    <span class="media-heading"><a href="#">Blog Post A</a></span>
-                                                    <small class="muted">Posted 14 April 2015</small>
-                                                </div>
-                                            </div>
-                                            <div class="media">
-                                                <div class="pull-left">
-                                                    <img class="widget-img" src="./recursos-portal/imagenes/widget/widget2.jpg" alt="">
-                                                </div>
-                                                <div class="media-body">
-                                                    <span class="media-heading"><a href="#">Blog Post B</a></span>
-                                                    <small class="muted">Posted 14 April 2015</small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="widget">
-                                        <h4 class="widget-title">Popular Tags</h4>
-                                        <div class="tagcloud">
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Local</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Business</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Media</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Photogtraphy</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Aid</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Fashion</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">News</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Cars</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Global Affairs</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Music</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">Downloads</a>
-                                            <a href="#" class="tag-link btn btn-theme btn-white btn-xs smoothie" title="3 topics">MP3</a>
-                                        </div>
+                                        <h4 class="widget-title"><strong>Recomendación</strong></h4>
+                                        <p class="lead">Para mejores experiencias te invitamos a visitar cada uno de los pueblos para que descubras personalmente el por qué es considerado mágico.</p>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +202,7 @@
                 <footer class="white-wrapper">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-6 text-left">
+                            <!-- <div class="col-md-6 text-left">
                                 <ul class="list-inline social-links wow">
                                     <li>
                                         <a href="#"><i class="fa fa-twitter"></i></a>
@@ -241,9 +223,9 @@
                                         <a href="#"><i class="fa fa-linkedin"></i></a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
 
-                            <div class="col-md-6 text-right">
+                            <div class="col-md-12 text-center">
                                 <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
                             </div>
                         </div>
@@ -348,12 +330,11 @@
         $(document).ready(function() {
             'use strict';
             jQuery('#headerwrap').backstretch([
-                "./recursos-portal/imagenes/header1.jpg",
-                "./recursos-portal/imagenes/header2.jpg",
-                "./recursos-portal/imagenes/header3.jpg",
-								"./recursos-portal/imagenes/header-pueblo.jpg"
+                "./recursos-portal/imagenes/header_inicio1.jpg",
+                "./recursos-portal/imagenes/header_inicio2.jpg",
+                "./recursos-portal/imagenes/header_inicio3.jpg"
             ], {
-                duration: 4000,
+                duration: 5000,
                 fade: 500
             });
         });
