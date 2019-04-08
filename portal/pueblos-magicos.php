@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
+		
     <link rel="shortcut icon" href="../recursos-portal/imagenes/favicon.jpg">
 
         <title><?php echo $TITLE;?></title>
@@ -45,8 +45,9 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
-                    <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
+											
+											<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="../recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a></a>
+                      <a class="navbar-brand logo-dark" href="."><img style="margin-top: -30px;" src="../recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -59,7 +60,7 @@
                         <a href="./portal/login.php">Login</a>
 											<li><a href="#search"><i class="pe-7s-search"></i></a></li>
                     </ul>
-
+										
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -76,7 +77,7 @@
             </div>
         </div>
 				<?php
-
+					
 				?>
         <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header-pueblo.jpg" data-speed="0.7">
             <div class="section-inner pad-top-200">
@@ -91,17 +92,32 @@
         </section>
 
         <section class="white-bg">
+						<form>
+							Cadena a buscar <input id="searchTerm" type="text" onkeyup="doSearch()" />
+						</form>
             <div class="section-inner">
                 <div class="container">
                     <div>
-                        <ul class="portfolio-items nopadding-lr isotope list-unstyled">
+                        <ul class="portfolio-items opaqued nopadding-lr isotope list-unstyled" id="datos">
                             <li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
                                 <img src="../recursos-portal/imagenes/p1.jpg" class="img-responsive smoothie" alt="">
-                                <div class="overlay-item-caption smoothie"></div>
+                                <div class="overlay-item-caption smoothie">
+																	<h3 class="smoothie" style="margin: 50px auto;">Nombre aqui z</h3>
+																</div>
                                 <div class="hover-item-caption smoothie">
                                     <div class="vertical-center smoothie">
-                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"></a></h3>
-                                        <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">Ver más</a>
+                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project">Nombre aqui z</a></h3>
+                                        <a href="./pueblo" class="smoothie btn btn-primary">Ver más</a>
+                                    </div>
+                                </div>
+                            </li>
+														<li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
+                                <img src="../recursos-portal/imagenes/header1.jpg" class="img-responsive smoothie" alt="">
+                                <div class="overlay-item-caption smoothie"><h3 class="smoothie" style="margin: 50px auto;">Nombre aqui x</h3></div>
+                                <div class="hover-item-caption smoothie">
+                                    <div class="vertical-center smoothie">
+                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project">Nombre aqui x</a></h3>
+                                        <a href="./pueblo" class="smoothie btn btn-primary">Ver más</a>
                                     </div>
                                 </div>
                             </li>
@@ -162,6 +178,42 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+		<script language="javascript">
+		function doSearch()
+		{
+			var tableReg = document.getElementById('datos');
+			var searchText = document.getElementById('searchTerm').value.toLowerCase();
+			var cellsOfRow="";
+			var found=false;
+			var compareWith="";
+ 
+			// Recorremos todas las filas con contenido de la tabla
+			for (var i = 1; i < tableReg.rows.length; i++)
+			{
+				cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+				found = false;
+				// Recorremos todas las celdas
+				for (var j = 0; j < cellsOfRow.length && !found; j++)
+				{
+					compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+					// Buscamos el texto en el contenido de la celda
+					if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1))
+					{
+						found = true;
+					}
+				}
+				if(found)
+				{
+					tableReg.rows[i].style.display = '';
+				} else {
+					// si no ha encontrado ninguna coincidencia, esconde la
+					// fila de la tabla
+					tableReg.rows[i].style.display = 'none';
+				}
+			}
+		}
+	</script>
+
 
 </body>
 
