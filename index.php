@@ -350,9 +350,10 @@
             jQuery('#headerwrap').backstretch([
                 "./recursos-portal/imagenes/header1.jpg",
                 "./recursos-portal/imagenes/header2.jpg",
-                "./recursos-portal/imagenes/header3.jpg"
+                "./recursos-portal/imagenes/header3.jpg",
+								"./recursos-portal/imagenes/header-pueblo.jpg"
             ], {
-                duration: 8000,
+                duration: 4000,
                 fade: 500
             });
         });
