@@ -330,20 +330,11 @@
         $(document).ready(function() {
             'use strict';
             jQuery('#headerwrap').backstretch([
-<<<<<<< HEAD
                 "./recursos-portal/imagenes/header_inicio1.jpg",
                 "./recursos-portal/imagenes/header_inicio2.jpg",
                 "./recursos-portal/imagenes/header_inicio3.jpg"
             ], {
                 duration: 5000,
-=======
-                "./recursos-portal/imagenes/header1.jpg",
-                "./recursos-portal/imagenes/header2.jpg",
-                "./recursos-portal/imagenes/header3.jpg",
-								"./recursos-portal/imagenes/header-pueblo.jpg"
-            ], {
-                duration: 4000,
->>>>>>> 69341fd22d367e0fd0dc5e0a0b592e8a6a9b1d22
                 fade: 500
             });
         });
