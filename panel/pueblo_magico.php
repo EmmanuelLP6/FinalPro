@@ -150,7 +150,7 @@
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Nuestros pueblos magicos<small>
-                        <a href="#" type="button" class="btn btn-default submit">sdfsdfsd</a></small>
+                        <a href="#" type="button" class="btn btn-default submit">Nuevo</a></small>
                         <!-- <button class="btn btn-default source" onclick="new PNotify({
                                   title: 'Regular Success',
                                   text: 'That thing that you were trying to do worked!',
@@ -167,20 +167,31 @@
                           <tr>
                             <th>No.</th>
                             <th>Pueblo mágico</th>
-                            <th>Estado </th>
+                            <th>Imagen 1</th>
+                            <th>Nombre platillo</th>
+                            <th>Nombre Artesania</th>
+                            <th>Localidad</th>
                             <th>Opcion</th>
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                           <td></td>
-                           <td></td>
-                           <td></td>
-                           <td>
-                             <a href="#" type="button" class="btn btn-default submit">Actulizar</a></small>
-                             <a href="#" type="button" class="btn btn-default submit">Eliminar</a></small>
-                           </td>
-                          </tr>
+                        <?php
+                           $query = 'select pueblo.id_pueblo, pueblo.nombre_pueblo, pueblo.img1, pueblo.img2, pueblo.img3, platillo.nombre_platillo, artesania.nombre_artesania, localidad.nombre_localidad from pueblo inner join platillo inner join artesania inner join localidad where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and pueblo.id_localidad=localidad.id_localidad;';
+                           $query_result = mysqli_query($conexion,$query);
+                            while($ver=mysqli_fetch_row($query_result)){
+                        
+                       echo ' <tr>
+                          <td>'.$ver[0].'</td>
+                          <td>'.$ver[1].'</td>
+                          <td><img width="80px" src="../'.$ver[4].'"></td>
+                          <td>'.$ver[5].'</td>
+                          <td>'.$ver[6].'</td>
+                          <td>'.$ver[7].'</td>
+                          <td><a href="actven.php?id='.$ver[0].'"><button class="btn btn-warning glyphicon glyphicon-pencil"> Modificar</button></a></td>
+                          <td><a href="./adm/el-ven.php?id='.$ver[0].'"><button class="btn btn-danger glyphicon glyphicon-remove"> Eliminar</button></a></button><td>
+                        </tr>';
+                            }
+                          ?>
                         </tbody>
                       </table>
                     </div>
