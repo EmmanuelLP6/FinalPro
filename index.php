@@ -53,7 +53,7 @@
                         <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./img/logo.jpeg" alt="logo" height="70px"></a>
                         <!--<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a>-->
                         <!--<a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a>-->
-                        <a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./img/logo.jpeg" alt="logo" height="70px"></a>
+                        <a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./img/log.png" alt="logo" height="70px"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -78,8 +78,8 @@
             <header id="headerwrap" class="dark-wrapper backstretched special-max-height no-overlay">
                 <div class="container vertical-center">
                     <div class="intro-text vertical-center text-left smoothie">
-                        <div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s">Bienvenido a <?php echo $TITLE;?></div>
-                        <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">Conoce más sobre <span class="rotate">
+                        <center><div class="intro-heading wow fadeIn heading-font" data-wow-delay="0.2s"> <?php echo $TITLE;?></div></center>
+                        <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s"> <span class="rotate">
                             <?php
                             $sql = 'SELECT * FROM estado ORDER BY nombre_estado';
                             $r_sql = mysqli_query($conexion,$sql);
