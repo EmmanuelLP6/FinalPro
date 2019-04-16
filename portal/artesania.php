@@ -17,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../img/logo.jpeg">
+	<link rel="shortcut icon" href="../img/logo.jpeg">
 
 
     <title><?php echo $TITLE;?></title>
@@ -39,7 +39,6 @@
 <body id="page-top" class="index">
 
     <div class="master-wrapper">
-        <!-- Navigation -->
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-fixed-top fadeInDown" data-wow-delay="0.5s">
             <div class="container">
@@ -76,12 +75,12 @@
 
 
 
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="<?php echo '../'.$row['imagen_platillo'];?>" data-speed="0.7">
+        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="<?php echo '../'.$row['img_artesania'];?>" data-speed="0.7">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 mt30 wow text-center">
-                            <h2 class="section-heading">Platillo<br> <B><?php echo $row['nombre_platillo'];?></B></h2>
+                            <h2 class="section-heading">Artesania<br> <B><?php echo $row['nombre_artesania'];?></B></h2>
                         </div>
                     </div>
                 </div>
@@ -94,21 +93,21 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-6 mb50">
+                                <div class="col-xs-12 col-sm-5 mb50">
                                     <div class="images">
-                                        <span class="onsale"><?php echo $row['nombre_platillo'];?></span>
+                                        <span class="onsale"><?php echo $row['nombre_artesania'];?></span>
                                         <a class="lb-link" data-rel="product-gallery" href="assets/img/shop/product1.jpg">
-                                            <img alt="Image Title" class="img-responsive" src="<?php echo '../'.$row['imagen_platillo'];?>" title="Image Title">
+                                            <img alt="Image Title" class="img-responsive" src="<?php echo '../'.$row['img_artesania'];?>" title="Image Title">
                                         </a>
                                     </div>
                                 </div>
 
-                                <div class="col-xs-12 col-sm-6 mb50">
+                                <div class="col-xs-12 col-sm-7 mb50">
                                     <div class="summary entry-summary">
 
                                         <div>
                                             <p class="price">
-                                                <ins><span class="amount"><?php echo $row['nombre_platillo'];?></span>
+                                                <ins><span class="amount"><?php echo $row['nombre_artesania'];?></span>
                                                 </ins>
                                             </p>
                                         </div>
@@ -118,65 +117,25 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="main-sidebar" class="col-md-3 col-md-offset-1 divider-wrapper wow fadeIn" data-wow-delay="0.5s">
-                            <div>
-                                <div class="widget">
-                                    <h4 class="widget-title"><strong>Los visitantes </strong> Clasificaron</h4>
-                                    <div>
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <span class="media-heading"><a class="coloured">Presentaci√≥n</a></span>
-                                                <div class="muted">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+								<div class="col-xs-12 col-sm-7 mb50">
+                                    <div class="summary entry-summary">
+
+                                        <div>
+                                            <p class="price">
+                                                <ins><span class="amount">Materiales</span>
+                                                </ins>
+                                            </p>
                                         </div>
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <span class="media-heading"><a class="coloured">Sabor</a></span>
-                                                <div class="muted">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <span class="media-heading"><a class="coloured">Precio</a></span>
-                                                <div class="muted">
-                                                    <ul class="list-unstyled">
-                                                        <li>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                            <span class="glyphicon glyphicon-star"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+
+                                        <div class="lead">
+                                            <p><?php echo $row['materiales'];?></p>
                                         </div>
                                     </div>
                                 </div>
+								
                             </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -189,14 +148,14 @@
                             <div class="row">
                                 <div class="col-md-6 text-center">
                                     <div class="widget about-us-widget">
-                                        <h4 class="widget-title"><strong>Platillos</strong> tÌpicos</h4>
-                                        <p class="lead">Conoce el platillo principal de cada pueblo m·gico, siendo un deleite ˙nico para el paladar.</p>
+                                        <h4 class="widget-title"><strong>Platillos</strong> t√≠picos</h4>
+                                        <p class="lead">Conoce el platillo principal de cada pueblo m√°gico, siendo un deleite √∫nico para el paladar.</p>
                                     </div>
                                 </div>
                                 <div class="col-md-6 text-center">
                                     <div class="widget">
-                                        <h4 class="widget-title"><strong>RecomendaciÛn</strong></h4>
-                                        <p class="lead">Para mejores experiencias te invitamos a visitar cada uno de los pueblos para que descubras personalmente el por quÈ es considerado m·gico.</p>
+                                        <h4 class="widget-title"><strong>Recomendaci√≥n</strong></h4>
+                                        <p class="lead">Para mejores experiencias te invitamos a visitar cada uno de los pueblos para que descubras personalmente el por qu√© es considerado m√°gico.</p>
                                     </div>
                                 </div>
                             </div>

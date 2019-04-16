@@ -26,6 +26,7 @@
         <!-- Custom Fonts -->
         <link href="./recursos-portal/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
         <link href="./recursos-portal/css/pe-icons.css" rel="stylesheet">
+		<link rel="shortcut icon" href="./img/logo.jpeg">
 
     </head>
 
@@ -49,8 +50,10 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a>
-                        <a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a>
+                        <a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./img/logo.jpeg" alt="logo" height="70px"></a>
+                        <!--<a class="navbar-brand logo-light" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico.png" alt="logo" height="70px"></a>-->
+                        <!--<a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./recursos-portal/imagenes/mexico-black.png" alt="logo" height="70px"></a>-->
+                        <a class="navbar-brand logo-dark" href="."><img style="margin-top: -25px;" src="./img/logo.jpeg" alt="logo" height="70px"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -60,7 +63,7 @@
                                 <a href=".">Inicio</a>
                             </li>
                             <li>
-                                <a href="../portal/login.php">Login</a>
+                                <a href="./portal/login.php">Login</a>
                             </li>
                         </ul>
                     </div>
@@ -69,15 +72,7 @@
                 <!-- /.container-fluid -->
             </nav>
 
-            <div id="search-wrapper">
-                <button type="button" class="close">×</button>
-                <div class="vertical-center text-center">
-                    <form>
-                        <input type="search" value="" placeholder="Enter Search Term" />
-                        <button type="submit" class="btn btn-primary btn-white">Search</button>
-                    </form>
-                </div>
-            </div>
+            
 
             <!-- Header -->
             <header id="headerwrap" class="dark-wrapper backstretched special-max-height no-overlay">
@@ -87,7 +82,7 @@
                         <div class="intro-sub-heading wow fadeIn secondary-font" data-wow-delay="0.4s">Conoce más sobre <span class="rotate">
                             <?php
                             $sql = 'SELECT * FROM estado ORDER BY nombre_estado';
-                            $r_sql = mysqli_query($conect,$sql);
+                            $r_sql = mysqli_query($conexion,$sql);
                             $num = mysqli_num_rows($r_sql);
                             $cont = 0;
                             while (($row = mysqli_fetch_array($r_sql))!=null) {
@@ -122,7 +117,7 @@
                                             <!-- Elemento Carrousel -->
                                             <?php
                                             $sql = 'SELECT pueblo.id_pueblo, pueblo.nombre_prueblo as nombre, pueblo.img1 as imagen, razon.descripicion as descripcion FROM pueblo, razon WHERE razon.id_pueblo=pueblo.id_pueblo and  estatus = 1;';
-                                            $r_result = mysqli_query($conect,$sql);
+                                            $r_result = mysqli_query($conexion,$sql);
                                             $num = mysqli_num_rows($r_result);
                                             while (($row = mysqli_fetch_array($r_result))!=null) {
                                                 echo '
@@ -130,11 +125,11 @@
                                                     <div class="row">
                                                         <div class="col-xs-12">
                                                             <div class="icon-box-1 match-height mb30">
-                                                                <img src = "./recursos-portal/imagenes/'.$row['imagen'].'" class="img-responsive smoothie">
+                                                                <img src = "./'.$row['imagen'].'" class="img-responsive smoothie">
                                                                 <div class="content-area text-center">
                                                                     <h3 class="title">'.$row['nombre'].'</h3>
                                                                     <div>'.$row['descripcion'].'</div>
-                                                                    <a href = "">Ver más</a>
+                                                                    
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -155,7 +150,49 @@
                 </div>
             </section>
 
-
+			<section class="white-bg">
+            <div class="section-inner">
+                <div class="container">
+                    <div>
+						<?php
+							$query="select * from pueblo;";
+							$query_result= mysqli_query($conexion,$query);
+						?>
+                        <ul class="portfolio-items nopadding-lr isotope list-unstyled">
+							<?php
+								while($row = mysqli_fetch_array($query_result)){
+									echo '
+										<li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
+											<img src="./'.$row[7].'" class="img-responsive smoothie" alt="">
+											<div class="overlay-item-caption smoothie">
+												<h3 class="nom" style="
+												padding:8px 30px;
+												border-radius: 6px;
+												border:none;
+												display:inline-block;
+												color:#fff;
+												text-decoration: none;
+												background-color: #000;
+												height:20px;
+												margin: 30px auto;
+												padding: 5px;
+												">'.$row[1].'</h3>
+											</div>
+											<div class="hover-item-caption smoothie">
+													<div class="vertical-center smoothie">
+															<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">'.$row[1].'</a></h3>
+															<a href="./portal/pueblo_magico.php?id='.$row[0].'" class="smoothie btn btn-primary">Ver más</a>
+													</div>
+											</div>
+										</li>
+									';
+								}
+							?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 

@@ -1,6 +1,6 @@
 <?php
     include '../recursos-portal/librerias/constantes.php';
-		require '../adm/conexion.php';
+	require '../adm/conexion.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,6 +28,7 @@
     <!-- Custom Fonts -->
     <link href="../recursos-portal/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../recursos-portal/css/pe-icons.css" rel="stylesheet">
+	<link rel="shortcut icon" href="../img/logo.jpeg">
 
 </head>
 
@@ -85,39 +86,40 @@
             <div class="section-inner">
                 <div class="container">
                     <div>
-												<?php
-													$query="select * from pueblo;";
-													$query_result= mysqli_query($conexion,$query);
-												?>
+						<?php
+							$query="select * from pueblo;";
+							$query_result= mysqli_query($conexion,$query);
+						?>
                         <ul class="portfolio-items nopadding-lr isotope list-unstyled">
-														<?php
-															while($row = mysqli_fetch_array($query_result)){
-															echo '<li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
-																	<img src="../'.$row[7].'" class="img-responsive smoothie" alt="">
-																	<div class="overlay-item-caption smoothie">
-																		<h3 class="nom" style="
-																		padding:8px 30px;
-	border-radius: 6px;
-  border:none;
-  display:inline-block;
-  color:#fff;
-  text-decoration: none;
-  background-color: #000;
-  height:30px;
-	margin: 50px auto;
-	padding: 5px;
-																		">'.$row[1].'</h3>
-																	</div>
-																	<div class="hover-item-caption smoothie">
-																			<div class="vertical-center smoothie">
-																					<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">'.$row[1].'</a></h3>
-																					<a href="./pueblo_magico.php?id='.$row[0].'" class="smoothie btn btn-primary">Ver más</a>
-																			</div>
-																	</div>
-															</li>
-																';
-															}
-														?>
+							<?php
+								while($row = mysqli_fetch_array($query_result)){
+									echo '
+										<li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
+											<img src="../'.$row[7].'" class="img-responsive smoothie" alt="">
+											<div class="overlay-item-caption smoothie">
+												<h3 class="nom" style="
+												padding:8px 30px;
+												border-radius: 6px;
+												border:none;
+												display:inline-block;
+												color:#fff;
+												text-decoration: none;
+												background-color: #000;
+												height:30px;
+												margin: 50px auto;
+												padding: 5px;
+												">'.$row[1].'</h3>
+											</div>
+											<div class="hover-item-caption smoothie">
+													<div class="vertical-center smoothie">
+															<h3 class="desc"><a  href="./pueblo_magico.php?id='.$row[0].'" title="view project">'.$row[1].'</a></h3>
+															<a href="./pueblo_magico.php?id='.$row[0].'" class="smoothie btn btn-primary">Ver más</a>
+													</div>
+											</div>
+										</li>
+									';
+								}
+							?>
                         </ul>
                     </div>
                 </div>

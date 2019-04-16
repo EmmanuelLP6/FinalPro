@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
 
-    <title>Gentelella Alela! | </title>
+    <title>México Mágico</title>
 
     <!-- Bootstrap -->
     <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +60,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+               <a href="index.html" class="site_title"><img src="../img/logo.jpeg" width="35px" > <span>México Mágico</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -88,7 +88,7 @@
                     <a href="./dashboard.php"><i class="fa fa-home"></i> Inicio </a>
                   </li>
                   <li>
-                    <a href="./pueblo_magico.php"><i class="fa fa-home"></i> Pueblo mágicos </a>
+                    <a href="./pueblo_magico.php"><i class="fa fa-home"></i> Pueblo México Mágicos </a>
                   </li>
                 </ul>
               </div>
@@ -142,7 +142,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Pueblos Mágicos <small></small></h3>
+                <h3>Pueblos México Mágicos <small></small></h3>
               </div>
               <div class="clearfix"></div>
               <div class="row">
@@ -150,7 +150,7 @@
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Nuestros pueblos magicos<small>
-                        <a href="#" type="button" class="btn btn-default submit">Nuevo</a></small>
+                        <a href="#" type="button" class="btn btn-success">Nuevo</a></small>
                         <!-- <button class="btn btn-default source" onclick="new PNotify({
                                   title: 'Regular Success',
                                   text: 'That thing that you were trying to do worked!',
@@ -166,29 +166,30 @@
                         <thead>
                           <tr>
                             <th>No.</th>
-                            <th>Pueblo mágico</th>
+                            <th>Pueblo  Mágico</th>
                             <th>Imagen 1</th>
                             <th>Nombre platillo</th>
                             <th>Nombre Artesania</th>
-                            <th>Localidad</th>
                             <th>Opcion</th>
                           </tr>
                         </thead>
                         <tbody>
                         <?php
-                           $query = 'select pueblo.id_pueblo, pueblo.nombre_pueblo, pueblo.img1, pueblo.img2, pueblo.img3, platillo.nombre_platillo, artesania.nombre_artesania, localidad.nombre_localidad from pueblo inner join platillo inner join artesania inner join localidad where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and pueblo.id_localidad=localidad.id_localidad;';
+                           $query = 'select pueblo.*, razon.*, platillo.*, artesania.*, estado.* from pueblo inner join razon inner join platillo inner join artesania inner join localidad inner join municipio inner join estado where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and razon.id_pueblo=pueblo.id_pueblo  and pueblo.id_localidad = localidad.id_localidad and localidad.id_municipio=municipio.id_municipio and municipio.id_estado=estado.id_estado order by pueblo.fecha desc;';
                            $query_result = mysqli_query($conexion,$query);
+						   $num=1;
                             while($ver=mysqli_fetch_row($query_result)){
                         
                        echo ' <tr>
-                          <td>'.$ver[0].'</td>
+                          <td>'.$num++.'</td>
                           <td>'.$ver[1].'</td>
-                          <td><img width="80px" src="../'.$ver[4].'"></td>
-                          <td>'.$ver[5].'</td>
-                          <td>'.$ver[6].'</td>
-                          <td>'.$ver[7].'</td>
-                          <td><a href="actven.php?id='.$ver[0].'"><button class="btn btn-warning glyphicon glyphicon-pencil"> Modificar</button></a></td>
-                          <td><a href="./adm/el-ven.php?id='.$ver[0].'"><button class="btn btn-danger glyphicon glyphicon-remove"> Eliminar</button></a></button><td>
+                          <td><img width="80px" src="../'.$ver[6].'"></td>
+                          <td>'.$ver[15].'</td>
+                          <td>'.$ver[20].'</td>
+						  <td>
+							<a href="actven.php?id='.$ver[0].'" class="btn btn-warning glyphicon glyphicon-pencil">Modificar</a>
+							<a href="actven.php?id='.$ver[0].'" class="btn btn-danger glyphicon glyphicon-remove">Eliminar</a>
+						  </td>
                         </tr>';
                             }
                           ?>

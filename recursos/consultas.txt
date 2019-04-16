@@ -1,3 +1,5 @@
+drop database pueblosmagicos;
+create database pueblosmagicos default character set  utf8 collate utf8_general_ci;
 Insert into estado values(21,'Colima ');
 Insert into estado values(22,' Durango');
 Insert into estado values(23,'Guanajuato');
@@ -20,47 +22,22 @@ insert into localidad values(21,'Comala ',21);
 insert into localidad values(22,' Mapimí',22);
 insert into localidad values(23,'Dolores Hidalgo ',23);
 insert into localidad values(24,' Jalpa de Cánovas',24);
-insert into localidad values(25,'San Pedro de los Pozos '25,);
+insert into localidad values(25,'San Pedro de los Pozos ',25);
 insert into localidad values(26,'Salvatierra ',26);
 insert into localidad values(27,'Yuriria ',27);
 insert into localidad values(28,' Taxco de Alarcón',28);
 insert into localidad values(29,'Huasca de Ocampo',29);
 insert into localidad values(30,'Huichapan ',30);
 
-
-
-insert into pueblo values(21,'Comala',' curdate()','curtime() ', 1,' img/p21.jpg',' img/p212.jpg','img/p213.png ',21 ,21 ,21 );
-insert into pueblo values(22,' Mapimí','curdate()','curtime() ', 1, ' img/p22.jpg',' img/p222.jpg','img/p223.jpg ', 22,22 ,22 );
-insert into pueblo values(23,'Dolores Hidalgo ','curdate() ','curtime()  ',1 ,' img/p23.jpg',' img/p232.jpg','img/p233.jpg', 23,23 ,23  );
-insert into pueblo values(24,'Jalpa',' curdate()',' curtime() ', 1,' img/p24.jpg',' img/p242.jpg','img/p243.jpg ', 24,24 ,24  );
-insert into pueblo values(25,' Mineral de Pozos','curdate() ','curtime()  ', 1,' img/p25.jpg',' img/p252.jpg','img/p253.jpg ', 25,25 ,25  );
-insert into pueblo values(26,' Salvatierra',' curdate()','curtime()  ', 1,' img/p26.jpg',' img/p262.jpg','img/p263.jpg ', 26,26 ,26  );
-insert into pueblo values(27,' Yuriria','curdate() ',' curtime() ', 1,' img/p27.jpg',' img/p272.jpg','img/p273.jpg ', 27,27 ,27  );
-insert into pueblo values(28,' Taxco',' curdate()','curtime()  ', 1,' img/p28.jpg',' img/p282.jpg','img/p283.jpg', 28, 28,28  );
-insert into pueblo values(29,'Huasca de Ocampo ','curdate() ','curtime()  ', 1,' img/p29.jpg',' img/p292.jpg','img/p293.jpg ', 29,29 ,29  );
-insert into pueblo values(30,' Huichapan','curdate() ','curtime()  ',1 , ' img/p30.jpg',' img/p302.jpg','img/p303.jpg ',30 ,30 ,30 );
-
-insert into razon values(21,'Comala es conocido como el “Pueblo Blanco de América”, y esto se debe a sus tradicionales techos de teja colorada y sus altas fachadas de color blanco que resplandecen y dan brillo a este sitio que guarda una gran mística por tener el nombre que Rulfo escogió como escenario de su conocida novela Pedro Páramo. “Lugar donde hacen comales” es el significado de su nombre y es paso obligado para quienes visitan el Volcán de Fuego o la ciudad de Colima. ',21);
-insert into razon values(22,'Es un Pueblo Mágico fuera de serie por su aguerrida historia y su ubicación en medio de un desierto inhóspito. Te quedarás sin aliento cuando a cada paso que des escuches el crujir de la madera bajo tus pies y el viento de un barranco de cien metros de profundidad, en el Puente colgante de Ojuela, te musite los secretos del pueblo al oído y de su centro mineral fantasma mientras miras las verdes montañas que completan esta imponente estructura. ',22);
-insert into razon values(23,'Entre sus vías y callejones encontrarás la magia de la historia de México. Este Pueblo Mágico es reconocido como el crisol de la Independencia; por ello no es raro enterarse que resguarda sus secretos, como la Catedral, ese testigo silencio que pudo capturar en sus muros el sonido de la voz del cura Miguel Hidalgo cuando dio el grito de independencia. Y mientras paseas por este encantador y pintoresco pueblo, sus museos y monumentos te contarán la historia de México, transportándote a un mundo lleno de tradiciones',23);
-insert into razon values(24,'El olor a membrillo despertará tus sentidos en Jalpa de Cánovas; la tranquilidad que se respira aquí contrasta con el imponente Templo Del Señor De La Misericordia, con sus impecables ladrillos rojos que están ahí para dar cuenta del pasado: las viejas trojes, la extinta tienda de raya, la casa del administrador y el pequeño Santuario de Guadalupe donde antes rezaban los hacendados y hoy lo hacen los habitantes. ',24);
-insert into razon values(25,' En medio del semidesierto, con un paisaje cubierto de mezquites, se levanta Pozos con su historia minera que se ha convertido en el emblema de este acogedor poblado, todo el que ve sus ruinas se llena de asombro. Es un pueblo que revive como el ave legendaria pues este encantador lugar ha vuelto a renacer después de haber sido abandonado por su población en dos ocasiones a lo largo de su historia.',25);
-insert into razon values(26,'Salvatierra es un encuentro de dos mundos, donde la influencia española erigió poemas en sus plazas, conventos y templos. Destaca el Templo de las Capuchinas, que forma parte de la Ruta de los Conventos, un recorrido reconocido por la UNESCO como Patrimonio Mundial de la Humanidad, rodeado por graneros de trigo que con los rayos de sol brillan como cabellos de oro. Su existencia está marcada por el curso del río Lerma, por el añejo Puente de Batanes que lo cruza y por la larga acequia y el par de canales que del caudal se han servido siempre. Cuando te sientes en las plazas podrás ser testigo de la unión entre españoles e indígenas. ',26);
-insert into razon values(27,'Podrás descansar junto a la gente pescando y paseando en lancha sobre su cristalina superficie, pasear a caballo por la orilla o esperar la llegada del atardecer en otro cuerpo de agua, el Lago Cráter, cuya principal característica es que cada vez que hay un temblor o una erupción del volcán sus aguas se tiñen de rojo, también podrás descansar en sus cómodas palapas de la Isla La Angostura. ',27);
-insert into razon values(28,' Es un pequeño pero encantador Pueblo Mágico enclavado en una zona rodeada de grandes cerros y montañas, gracias a la intensa explotación de sus yacimientos de plata. Su gente aún vive del comercio y manufactura de objetos que el preciado metal permite; todavía se conservan también las construcciones barrocas levantadas durante el auge minero del Virreinato.',28);
-insert into razon values(29,'En este pueblo al final de la montaña aún resuena la bonanza de viejos tiempos, cuando se edificaron varias haciendas que convirtieron al Conde de Regla el hombre más rico de su época. Ahora son parte de un escenario con bosques y barrancas, donde prismas pétreos y cascadas y presas te robarán el aliento.Su arquitectura colonial se caracteriza por su sencillez que contrasta con su intrincada belleza natural. ',29);
-insert into razon values(30,' Caminar por las calles de Huichapan te hará sentir la historia de generaciones que han pisado sus tierras. Tocarás las raíces del pueblo observando las pinturas rupestres que dan fe de los primeros exploradores de Huichapan, mientras te deslumbran los vestigios de las culturas Otomí, Teotihuacana, Tolteca y Azteca, que también habitaron estas tierras y que los encontrarás en museo de Arqueología e Historia que te transportará a otros tiempos. Hasta el Convento de San Mateo hasta su plaza central que resguarda las tres iglesias del Conjunto Religioso y el Palacio Municipal.',30);
-
-
 insert into artesania values(21,'Mascara ','Madera ','animales de la región o a personajes de sus tradiciones ','img/p21art.jpg ');
 insert into artesania values(22,' Esculturas ','Naturales a base de geodas y tallado en piedra caliza de estalactitas y estalagmitas ','Actividad Minera','img/p22art.jpg ');
-insert into artesania values(23,'Piezas de Barro y Talavera ','Barro y Talabera ','Lugar donde se cazan palomas desendencia de los chichimecas ',' img/p23art.jpg');
+insert into artesania values(23,'Piezas de Barro y Talavera ','Barro y Talabera ','Lugar donde se cazan palomas desendencia de los chichimecas ','img/p23art.jpg');
 insert into artesania values(24,' Trompos','Madera ','Los juguetes de los antepasados ','img/p24art.jpg  ');
 insert into artesania values(25,'Muñecas','Tela ',' Muñecas Hechas a mano.
 Son 32 vestuarios completos y típicos de los estados de la república los que se bordan a mano en el taller de costura,  entre diseños de ropa chichimeca, trajes de Colima, Durango, Puebla, Veracruz y la vestimenta de la región ','img/p25art.jpg');
 insert into artesania values(26,' Manteles bordados','Tela ','Tradiccion de la region ','img/p26art.jpg ');
 insert into artesania values(27,' Rebozos','Tela ','Cultura y tradicion del lugar ','img/p27art.jpg');
-insert into artesania values(28,' Articulos de plata',' Plata','Cultura y  tradicion del lugar ya que son proveedores de plata.',' img/p28art.jpg');
+insert into artesania values(28,' Articulos de plata',' Plata','Cultura y  tradicion del lugar ya que son proveedores de plata.','img/p28art.jpg');
 insert into artesania values(29,'Barro ','Barro ',' Se ofrecen jarros, cazuelas, ceniceros, juguetes y desde luego vajillas completas, en las que los artesanos graban el nombre y apellido de las familias compradoras.','p29art.jpg ');
 insert into artesania values(30,'Tapetes ','Tela ',' Tras el paso de los años el elaborar tapetes es una tradicion',' p30art.jpg');
 
@@ -75,7 +52,29 @@ Licue los demás ingredientes, y bañe las pechugas con la salsa en frío.
 Sirva acompañado de brócoli a la mantequilla. ','img/p25comida.jpg ');
 insert into platillo values(26,' Cochinillo','Pelailla de cerdo, matado a pocos meses de su nacimiento y que se suele cocinar en las tahonas de pan. ','img/p26comida.jpg ');
 insert into platillo values(27,' Barbacoa','se coloca la leña encendida con otra capa de madera natural para que se consuma mientras se cuece la carne; después se le coloca una pequeña rejilla hecha con ramas de árbol para poder sostener la olla con la carne. ','img/p27comida.jpg ');
-insert into platillo values(28,' Platillo de iguana','En una cazuela de barro, se vierte un poco de aceite y cebolla. Ahí se sofríe la carne unos minutos. Se muelen chiles, tomates, cebolla, pimienta, ajo y sal. Luego se echan a la cazuela, junto con la carne. En vez de agua, se le agrega un poco del caldo en el que se coció la iguana, para darle la textura de salsa. 10 minutos después el platillo está listo, se sirve con frijoles y tortillas. ',' img/p28comida.jpg');
+insert into platillo values(28,' Platillo de iguana','En una cazuela de barro, se vierte un poco de aceite y cebolla. Ahí se sofríe la carne unos minutos. Se muelen chiles, tomates, cebolla, pimienta, ajo y sal. Luego se echan a la cazuela, junto con la carne. En vez de agua, se le agrega un poco del caldo en el que se coció la iguana, para darle la textura de salsa. 10 minutos después el platillo está listo, se sirve con frijoles y tortillas. ','img/p28comida.jpg');
 insert into platillo values(29,' Pastes','Empanadas hecha a base de harina, manteca o mantequilla y sal, rellena de carne de res, papa y poro o cebolla.  ','img/p29comida.jpg ');
 insert into platillo values(30,' Barbacoa','se coloca la leña encendida con otra capa de madera natural para que se consuma mientras se cuece la carne; después se le coloca una pequeña rejilla hecha con ramas de árbol para poder sostener la olla con la carne. ','img/p27comida.jpg');
+
+insert into pueblo values(21,'Comala','2019-01-15','12:05:38', 1,'img/p21.jpg','img/p212.jpg','img/p213.png ',21 ,21 ,21 );
+insert into pueblo values(22,' Mapimí','2019-02-15','05:05:38', 1, 'img/p22.jpg','img/p222.jpg','img/p223.jpg ', 22,22 ,22 );
+insert into pueblo values(23,'Dolores Hidalgo ','2019-02-15','11:05:38',1 ,'img/p23.jpg','img/p232.jpg','img/p233.jpg', 23,23 ,23  );
+insert into pueblo values(24,'Jalpa',' 2019-03-15','09:05:38', 1,'img/p24.jpg','img/p242.jpg','img/p243.jpg ', 24,24 ,24  );
+insert into pueblo values(25,' Mineral de Pozos','2019-04-15','05:05:38', 1,'img/p25.jpg','img/p252.jpg','img/p253.jpg ', 25,25 ,25  );
+insert into pueblo values(26,' Salvatierra',' 2019-02-02','08:05:38', 1,'img/p26.jpg','img/p262.jpg','img/p263.jpg ', 26,26 ,26  );
+insert into pueblo values(27,' Yuriria','2019-02-05',' 09:05:38', 1,'img/p27.jpg','img/p272.jpg','img/p273.jpg ', 27,27 ,27  );
+insert into pueblo values(28,' Taxco',' 2019-04-15','10:15:38', 1,'img/p28.jpg','img/p282.jpg','img/p283.jpg', 28, 28,28  );
+insert into pueblo values(29,'Huasca de Ocampo ','2019-02-15','12:45:38', 1,'img/p29.jpg','img/p292.jpg','img/p293.jpg ', 29,29 ,29  );
+insert into pueblo values(30,' Huichapan','2019-01-15','12:55:38',1 , 'img/p30.jpg','img/p302.jpg','img/p303.jpg ',30 ,30 ,30 );
+
+insert into razon values(21,'Comala es conocido como el “Pueblo Blanco de América”, y esto se debe a sus tradicionales techos de teja colorada y sus altas fachadas de color blanco que resplandecen y dan brillo a este sitio que guarda una gran mística por tener el nombre que Rulfo escogió como escenario de su conocida novela Pedro Páramo. “Lugar donde hacen comales” es el significado de su nombre y es paso obligado para quienes visitan el Volcán de Fuego o la ciudad de Colima. ',21);
+insert into razon values(22,'Es un Pueblo Mágico fuera de serie por su aguerrida historia y su ubicación en medio de un desierto inhóspito. Te quedarás sin aliento cuando a cada paso que des escuches el crujir de la madera bajo tus pies y el viento de un barranco de cien metros de profundidad, en el Puente colgante de Ojuela, te musite los secretos del pueblo al oído y de su centro mineral fantasma mientras miras las verdes montañas que completan esta imponente estructura. ',22);
+insert into razon values(23,'Entre sus vías y callejones encontrarás la magia de la historia de México. Este Pueblo Mágico es reconocido como el crisol de la Independencia; por ello no es raro enterarse que resguarda sus secretos, como la Catedral, ese testigo silencio que pudo capturar en sus muros el sonido de la voz del cura Miguel Hidalgo cuando dio el grito de independencia. Y mientras paseas por este encantador y pintoresco pueblo, sus museos y monumentos te contarán la historia de México, transportándote a un mundo lleno de tradiciones',23);
+insert into razon values(24,'El olor a membrillo despertará tus sentidos en Jalpa de Cánovas; la tranquilidad que se respira aquí contrasta con el imponente Templo Del Señor De La Misericordia, con sus impecables ladrillos rojos que están ahí para dar cuenta del pasado: las viejas trojes, la extinta tienda de raya, la casa del administrador y el pequeño Santuario de Guadalupe donde antes rezaban los hacendados y hoy lo hacen los habitantes. ',24);
+insert into razon values(25,' En medio del semidesierto, con un paisaje cubierto de mezquites, se levanta Pozos con su historia minera que se ha convertido en el emblema de este acogedor poblado, todo el que ve sus ruinas se llena de asombro. Es un pueblo que revive como el ave legendaria pues este encantador lugar ha vuelto a renacer después de haber sido abandonado por su población en dos ocasiones a lo largo de su historia.',25);
+insert into razon values(26,'Salvatierra es un encuentro de dos mundos, donde la influencia española erigió poemas en sus plazas, conventos y templos. Destaca el Templo de las Capuchinas, que forma parte de la Ruta de los Conventos, un recorrido reconocido por la UNESCO como Patrimonio Mundial de la Humanidad, rodeado por graneros de trigo que con los rayos de sol brillan como cabellos de oro. Su existencia está marcada por el curso del río Lerma, por el añejo Puente de Batanes que lo cruza y por la larga acequia y el par de canales que del caudal se han servido siempre. Cuando te sientes en las plazas podrás ser testigo de la unión entre españoles e indígenas. ',26);
+insert into razon values(27,'Podrás descansar junto a la gente pescando y paseando en lancha sobre su cristalina superficie, pasear a caballo por la orilla o esperar la llegada del atardecer en otro cuerpo de agua, el Lago Cráter, cuya principal característica es que cada vez que hay un temblor o una erupción del volcán sus aguas se tiñen de rojo, también podrás descansar en sus cómodas palapas de la Isla La Angostura. ',27);
+insert into razon values(28,' Es un pequeño pero encantador Pueblo Mágico enclavado en una zona rodeada de grandes cerros y montañas, gracias a la intensa explotación de sus yacimientos de plata. Su gente aún vive del comercio y manufactura de objetos que el preciado metal permite; todavía se conservan también las construcciones barrocas levantadas durante el auge minero del Virreinato.',28);
+insert into razon values(29,'En este pueblo al final de la montaña aún resuena la bonanza de viejos tiempos, cuando se edificaron varias haciendas que convirtieron al Conde de Regla el hombre más rico de su época. Ahora son parte de un escenario con bosques y barrancas, donde prismas pétreos y cascadas y presas te robarán el aliento.Su arquitectura colonial se caracteriza por su sencillez que contrasta con su intrincada belleza natural. ',29);
+insert into razon values(30,' Caminar por las calles de Huichapan te hará sentir la historia de generaciones que han pisado sus tierras. Tocarás las raíces del pueblo observando las pinturas rupestres que dan fe de los primeros exploradores de Huichapan, mientras te deslumbran los vestigios de las culturas Otomí, Teotihuacana, Tolteca y Azteca, que también habitaron estas tierras y que los encontrarás en museo de Arqueología e Historia que te transportará a otros tiempos. Hasta el Convento de San Mateo hasta su plaza central que resguarda las tres iglesias del Conjunto Religioso y el Palacio Municipal.',30);
 

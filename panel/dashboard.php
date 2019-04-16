@@ -12,6 +12,7 @@
   $consulta_artesania = 'SELECT count(id_artesania) AS artesania FROM artesania';
   $consulta_estado = 'SELECT count(id_estado) AS estado FROM estado';
   $consulta_platillo = 'SELECT count(id_platillo) AS platillo FROM platillo';
+  
   $query = mysqli_query($conexion,$consulta_pueblos);
   $query2 = mysqli_query($conexion,$consulta_artesania);
   $query3 = mysqli_query($conexion,$consulta_estado);
@@ -29,9 +30,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<link rel="shortcut icon" href="../img/logo.jpeg">
 
-    <title>Gentelella Alela! | </title>
+    <title>México Mágico </title>
 
     <!-- Bootstrap -->
     <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -66,7 +67,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><img src="../img/logo.jpeg" width="35px" > <span>México Mágico</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -196,19 +197,31 @@
                         <th>No.</th>
                         <th>Pueblo mágico</th>
                         <th>Estado </th>
-                        <th>Opcion</th>
+                        <th>Fecha</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>
+               
+                       
+						<?php 
+							$select_all='select pueblo.*, razon.*, platillo.*, artesania.*, estado.* from pueblo inner join razon inner join platillo inner join artesania inner join localidad inner join municipio inner join estado where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and razon.id_pueblo=pueblo.id_pueblo  and pueblo.id_localidad = localidad.id_localidad and localidad.id_municipio=municipio.id_municipio and municipio.id_estado=estado.id_estado order by pueblo.fecha desc;';
+							$result = mysqli_query($conexion,$select_all);
+							$num=1;
+							while($row = mysqli_fetch_array($result)){
+								echo'
+									<tr>
+										<td>'.$num++.'</td>
+										<td>'.$row['nombre_prueblo'].'</td>
+										<td>'.$row['nombre_estado'].'</td>
+										<td>'.$row['fecha'].'</td>
+									</tr>
+								';
+							}
+						?>
                          <!-- <a href="#" type="button" class="btn btn-default submit">Actulizar</a></small>
                          <a href="#" type="button" class="btn btn-default submit">Eliminar</a></small> -->
-                       </td>
-                      </tr>
+
+                      
                     </tbody>
                   </table>
                 </div>

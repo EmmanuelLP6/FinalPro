@@ -1,10 +1,23 @@
 <?php
     include '../recursos-portal/librerias/constantes.php';
-		//require '../adm/conexion.php';
+	require '../adm/conexion.php';
     $id=$_GET['id'];
-    $query='select * from pueblo where id_pueblo='.$id;
-    //$result_query=mysqli_query($conexion,$query);
-    //$row=mysqli_fetch_array($result_query);
+	//$id=21;
+    $query='select pueblo.*, razon.*, platillo.*, artesania.* from pueblo inner join razon inner join platillo inner join artesania where pueblo.id_platillo=platillo.id_platillo and pueblo.id_artesania=artesania.id_artesania and razon.id_pueblo=pueblo.id_pueblo and pueblo.id_pueblo='.$id;
+    $result_query=mysqli_query($conexion,$query);
+    $row=mysqli_fetch_array($result_query);
+	//$imagen = $row['img2'];
+	$random= rand(1,3);
+	if($random==1){
+		$imagen = $row['img1'];
+	}
+	else if($random==2){
+		$imagen = $row['img2'];
+	}
+	else{
+		$imagen = $row['img3'];
+	}
+	//echo $select;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,6 +45,7 @@
     <!-- Custom Fonts -->
     <link href="../recursos-portal/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="../recursos-portal/css/pe-icons.css" rel="stylesheet">
+	<link rel="shortcut icon" href="../img/logo.jpeg">
 </head>
 
 <body id="page-top" class="index">
@@ -58,11 +72,11 @@
                 <div class="collapse navbar-collapse" id="main-navigation">
                     <ul class="nav navbar-nav navbar-right">
 											<li>
-                        <a href=".">Inicio</a>
+                        <a href="../index.php">Inicio</a>
                       </li>
                       <li>
-                        <a href="./portal/login.php">Login</a>
-											<li><a href="#search"><i class="pe-7s-search"></i></a></li>
+                        <a href="../portal/login.php">Login</a>
+											
                     </ul>
 
                 </div>
@@ -71,185 +85,139 @@
             <!-- /.container-fluid -->
         </nav>
 
-        <div id="search-wrapper">
-            <button type="button" class="close">×</button>
-            <div class="vertical-center text-center">
-                <form>
-                    <input type="search" value="" placeholder="Introduce la palabra.." />
-                    <button type="submit" class="btn btn-primary btn-white">Buscar</button>
-                </form>
-            </div>
-        </div>
-				<?php
+		<?php
 
-				?>
-        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="../recursos-portal/imagenes/header-pueblo.jpg" data-speed="0.7">
+		?>
+        <section class="dark-wrapper opaqued parallax" data-parallax="scroll" data-image-src="<?php echo '../'.$imagen;?>" data-speed="0.7">
             <div class="section-inner pad-top-200">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 mt30 wow text-center">
-                            <h2 class="section-heading"><?php echo $row[1]; ?></h2>
+                            <h2 class="section-heading"><?php echo $row['nombre_prueblo']; ?></h2>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+		<section id="welcome">
+            <div class="section-inner nopaddingbottom">
 
-        <section class="white-bg">
-            <div class="section-inner">
                 <div class="container">
-                    <div>
-                        <ul class="portfolio-items nopadding-lr isotope list-unstyled">
-                            <li class="col-sm-6 col-xs-6 portfolio-item nopadding-lr apps isotope-item hover-item">
-                                <img src="../recursos-portal/imagenes/p1.jpg" class="img-responsive smoothie" alt="">
-                                <div class="overlay-item-caption smoothie"></div>
-                                <div class="hover-item-caption smoothie">
-                                    <div class="vertical-center smoothie">
-                                        <h3 class="smoothie mb30"><a href="single-portfolio-fullscreen.html" title="view project"></a></h3>
-                                        <a href="single-portfolio-fullscreen.html" class="smoothie btn btn-primary">Ver más</a>
-                                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+							<h2 class="post-title"><?php echo $row['nombre_prueblo']; ?></h2>
+                            <p class="lead">
+								<?php echo $row['descripicion'];?>
+							</p>
+                        </div>
 
-                                </div>
-
-                            </li>
-                            <h2 class="post-title">The Ultimate Experience</h2>
-                            <div class="item-metas text-muted mb30">
-                                <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
-                                <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
-                                <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
-                                <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
-                            </div>
-                            <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
-                            <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
-                        </ul>
+                        <div class="col-md-6">
+                            <img src="<?php echo '../'.$imagen;?>" class="img-responsive alignright wow fadeIn" data-wow-delay="0.5s" alt="">
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
-        <section>
+		
+		<section>
             <div class="section-inner">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-sm-4 blog-item mb100 wow match-height">
                             <div class="row">
                                 <div class="col-xs-12">
+									<center><h2 class="post-title">Platillo </h2></center>
                                     <div class="hover-item mb30">
-                                        <img src="assets/img/news/1.jpg" class="img-responsive smoothie" alt="title">
+                                        <img src="<?php echo '../'.$row['imagen_platillo'];?>" class="img-responsive smoothie" alt="title">
                                         <div class="overlay-item-caption smoothie"></div>
                                         <div class="hover-item-caption smoothie">
-                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
+                                            <h3 class="vertical-center smoothie"><a href="./comida.php?id_pueblo=<?php echo$row['id_pueblo'];?>" class="smoothie btn btn-primary page-scroll" title="view article">Ver</a></h3>
                                         </div>
                                     </div>
-                                    <h2 class="post-title">The Ultimate Experience</h2>
-                                    <div class="item-metas text-muted mb30">
-                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
-                                    </div>
-                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
-                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
+                                    <center><h2 class="post-title"><?php echo $row['nombre_platillo'];?></h2></center>
+                                    <p><?php echo $row['preparacion'];?></p>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-4 blog-item mb100 wow match-height">
+						<div class="col-sm-4 blog-item mb100 wow match-height"></div>
+						<div class="col-sm-4 blog-item mb100 wow match-height">
                             <div class="row">
                                 <div class="col-xs-12">
+									<center><h2 class="post-title">ARTESANIAS </h2></center>
                                     <div class="hover-item mb30">
-                                        <img src="assets/img/news/2.jpg" class="img-responsive smoothie" alt="title">
+                                        <img src="<?php echo '../'.$row['img_artesania'];?>" class="img-responsive smoothie" alt="title">
                                         <div class="overlay-item-caption smoothie"></div>
                                         <div class="hover-item-caption smoothie">
-                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
+                                            <h3 class="vertical-center smoothie"><a href="./artesania.php?id_pueblo=<?php echo$row['id_pueblo'];?>" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
                                         </div>
                                     </div>
-                                    <h2 class="post-title">The Ultimate Experience</h2>
-                                    <div class="item-metas text-muted mb30">
-                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
-                                    </div>
-                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
-                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
+                                    <center><h2 class="post-title"><?php echo $row['nombre_artesania'];?></h2></center>
+                                    <p><?php echo $row['significado'];?></p>
                                 </div>
                             </div>
                         </div>
+					</div>	
+				</div>
+			</div>
+		</section>			
 
-                        <div class="col-sm-4 blog-item mb100 wow match-height">
+       <div id="footer-wrapper" class="footer-image-bg">
+                <section class="transparent-wrapper">
+                    <div class="section-inner">
+                        <div class="container">
                             <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="hover-item mb30">
-                                        <img src="../img/ar11.jpg" class="img-responsive smoothie" alt="title">
-                                        <div class="overlay-item-caption smoothie"></div>
-                                        <div class="hover-item-caption smoothie">
-                                            <h3 class="vertical-center smoothie"><a href="single-post-right-sidebar.html" class="smoothie btn btn-primary page-scroll" title="view article">View</a></h3>
-                                        </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="widget about-us-widget">
+                                        <h4 class="widget-title"><strong>Platillos</strong> típicos</h4>
+                                        <p class="lead">Conoce el platillo principal de cada pueblo mágico, siendo un deleite único para el paladar.</p>
                                     </div>
-                                    <h2 class="post-title">The Ultimate Experience</h2>
-                                    <div class="item-metas text-muted mb30">
-                                        <span class="meta-item"><i class="pe-icon pe-7s-folder"></i> POSTED IN <span>News</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-ticket"></i> TAGS <span>Photography</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-user"></i> AUTHOR <span>Danny Jones</span></span>
-                                        <span class="meta-item"><i class="pe-icon pe-7s-comment"></i> COMMENTS <span>3</span></span>
+                                </div>
+                                <div class="col-md-6 text-center">
+                                    <div class="widget">
+                                        <h4 class="widget-title"><strong>Recomendación</strong></h4>
+                                        <p class="lead">Para mejores experiencias te invitamos a visitar cada uno de los pueblos para que descubras personalmente el por qué es considerado mágico.</p>
                                     </div>
-                                    <p>Behind sooner dining so window excuse he summer. Breakfast met certainty and fulfilled propriety led. Waited get either are wooded little her. Contrasted unreserved as mr particular collecting it everything as indulgence. Seems ask meant merry could put. Age old begin had boy noisy table front whole given.</p>
-                                    <a class="btn btn-primary mt30" href="single-post-right-sidebar.html">Read More</a>
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
-
                     </div>
+                </section>
 
-                    <div class="row paging text-center">
-                        <a class="btn btn-primary mt30" href="#">Older Posts</a>
+                <footer class="white-wrapper">
+                    <div class="container">
+                        <div class="row">
+                            <!-- <div class="col-md-6 text-left">
+                                <ul class="list-inline social-links wow">
+                                    <li>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-pinterest"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-behance"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                                    </li>
+                                </ul>
+                            </div> -->
+
+                            <div class="col-md-12 text-center">
+                                <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </footer>
             </div>
-        </section>
-
-        <footer class="white-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <ul class="list-inline social-links wow">
-                            <li>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-behance"></i></a>
-                            </li>
-                            <li>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <hr class="thin-hr" />
-
-                    <div class="col-md-12 text-center wow">
-                        <span class="copyright">Copyright 2019. Designed by DISTINCTIVE THEMES</span>
-                    </div>
-                </div>
-            </div>
-        </footer>
 
     </div>
 
