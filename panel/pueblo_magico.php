@@ -17,7 +17,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+	<link rel="shortcut icon" href="../img/logo.jpeg">
 
     <title>México Mágico</title>
 
@@ -150,7 +150,7 @@
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Nuestros pueblos magicos<small>
-                        <a href="#" type="button" class="btn btn-success">Nuevo</a></small>
+                        <a href="./registrar.php" type="button" class="btn btn-success">Nuevo</a></small>
                         <!-- <button class="btn btn-default source" onclick="new PNotify({
                                   title: 'Regular Success',
                                   text: 'That thing that you were trying to do worked!',
@@ -179,7 +179,7 @@
                            $query_result = mysqli_query($conexion,$query);
 						   $num=1;
                             while($ver=mysqli_fetch_row($query_result)){
-                        
+
                        echo ' <tr>
                           <td>'.$num++.'</td>
                           <td>'.$ver[1].'</td>
@@ -187,8 +187,8 @@
                           <td>'.$ver[15].'</td>
                           <td>'.$ver[20].'</td>
 						  <td>
-							<a href="actven.php?id='.$ver[0].'" class="btn btn-warning glyphicon glyphicon-pencil">Modificar</a>
-							<a href="actven.php?id='.$ver[0].'" class="btn btn-danger glyphicon glyphicon-remove">Eliminar</a>
+							<a href="../adm/actualizar_pueblo.php?id='.$ver[0].'" class="btn btn-warning glyphicon glyphicon-pencil">Modificar</a>
+							<a href="../adm/eliminar_pueblo.php?id='.$ver[0].'" class="btn btn-danger glyphicon glyphicon-remove">Eliminar</a>
 						  </td>
                         </tr>';
                             }

@@ -17,8 +17,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+  <link rel="shortcut icon" href="../img/logo.jpeg">
 
-    <title>Gentelella Alela! | </title>
+    <title>México Mágico</title>
 
     <!-- Bootstrap -->
     <link href="./vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -38,6 +39,19 @@
 
     <!-- Custom Theme Style -->
     <link href="./build/css/custom.min.css" rel="stylesheet">
+
+	<!-- bootstrap-wysiwyg -->
+    <link href="./vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <!-- Select2 -->
+    <link href="./vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <!-- Switchery -->
+    <link href="./vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
+    <link href="./vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="./vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+
   </head>
 
   <body class="nav-md">
@@ -46,7 +60,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+               <a href="index.html" class="site_title"><img src="../img/logo.jpeg" width="35px" > <span>México Mágico</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -124,117 +138,106 @@
         <!-- /top navigation -->
 
         <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Registrar nuevo pueblo mágico<small>  </small></h3>
+      <div class="right_col" role="main">
+		    <div class="">
+          <div class="row">
+            <div class="col-md-12 col-xs-12">
+              <div class="x_panel">
+              <div class="x_title">
+                <h2>Registrar nuevo pueblo mágico</h2>
+                <div class="clearfix"></div>
               </div>
-              <div class="clearfix"></div>
-              <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="x_panel">
-                    <!--<div class="x_title">
-                      <h2>Inserte los datos del pueblo magico<small>  </small></h2>
-                      <div class="clearfix"></div>
-                    </div>-->
-                    <div class="x_content">
-                      
-					  <div class="x_content">
-
-                    <form class="form-horizontal form-label-left" novalidate>
-
-                      <!--<p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
-                      </p>-->
-                      <span class="section">Ingresar la información correspondiente</span>
-
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombre del pueblo <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" placeholder="both name(s) e.g Jon Doe" required="required" type="text">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Email <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email" name="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Confirm Email <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="email" id="email2" name="confirm_email" data-validate-linked="email" required="required" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Number <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="number" id="number" name="number" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="website">Website URL <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="url" id="website" name="website" required="required" placeholder="www.website.com" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Occupation <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="occupation" type="text" name="occupation" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password" class="control-label col-md-3">Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password" type="password" name="password" data-validate-length="6,8" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Repeat Password</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="password2" type="password" name="password2" data-validate-linked="password" class="form-control col-md-7 col-xs-12" required="required">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Telephone <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="tel" id="telephone" name="phone" required="required" data-validate-length-range="8,20" class="form-control col-md-7 col-xs-12">
-                        </div>
-                      </div>
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Textarea <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <textarea id="textarea" required="required" name="textarea" class="form-control col-md-7 col-xs-12"></textarea>
-                        </div>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
-                        </div>
-                      </div>
-                    </form>
+              <div class="x_content">
+                <br />
+                  <form class="form-horizontal form-label-left input_mask" enctype="multipart/form-data" action="../adm/registrar_nuevo_pueblo.php" method="post">
+                  <h2>Ubicación</h2>
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Estado" name="nombre_estado" required>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                   </div>
-					  <!-- aqui colocan lo que deseen -->
+
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Municipio" name="nombre_municipio" required>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Localidad" name="nombre_localidad" required>
+                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <hr>
+                  <h2>Artesania</h2>
+                  <!-- <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback" >
+                    <img src="../img/logo.jpeg" alt="" width="250px">
+                  </div> -->
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <input type="file" value="" class="form-control has-feedback-left" placeholder="Artesania" name="img_artesania" required>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Artesania" name="nombre_artesania" required>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <textarea name="significado" rows="1" cols="80" class="form-control has-feedback-left" placeholder="Significado" required></textarea>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <textarea name="materiales" rows="1" cols="80" class="form-control has-feedback-left" placeholder="Materiales" required></textarea>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <!-- <br> -->
+                  <h2>Platillo</h2>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <input type="file" name="imagen_platillo" value="" class="form-control has-feedback-left" placeholder="Artesania" required>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del platillo" name="nombre_platillo">
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
+                    <textarea name="preparacion" rows="1" cols="80" class="form-control has-feedback-left" placeholder="Preparación"></textarea>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <h2>Pueblo</h2>
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="file" name="img1" value="" class="form-control has-feedback-left" placeholder="Artesania">
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="file" name="img2" value="" class="form-control has-feedback-left" placeholder="Artesania">
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                    <input type="file" name="img3" value="" class="form-control has-feedback-left" placeholder="Artesania">
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del pueblo mágico" name="nombre_prueblo">
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                    <textarea name="descripicion" rows="1" cols="80" class="form-control has-feedback-left" placeholder="Descripción del pueblo"></textarea>
+                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                  </div>
+                  <!-- <div class="ln_solid"></div> -->
+                  <div class="form-group">
+                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                      <input type="submit" name="" value="REGISTRAR" class="btn btn-primary">
+                      <!-- <button type="button" class="btn btn-primary">Cancel</button>
+						          <button class="btn btn-primary" type="reset">Reset</button>
+                      <button type="submit" class="btn btn-success">Submit</button> -->
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
+      </div>
         <!-- /page content -->
-		
+
 
         <!-- footer content -->
         <footer>
@@ -255,36 +258,31 @@
     <script src="./vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
     <script src="./vendors/nprogress/nprogress.js"></script>
-    <!-- Chart.js -->
-    <script src="./vendors/Chart.js/dist/Chart.min.js"></script>
-    <!-- gauge.js -->
-    <script src="./vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="./vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
     <script src="./vendors/iCheck/icheck.min.js"></script>
-    <!-- Skycons -->
-    <script src="./vendors/skycons/skycons.js"></script>
-    <!-- Flot -->
-    <script src="./vendors/Flot/jquery.flot.js"></script>
-    <script src="./vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="./vendors/Flot/jquery.flot.time.js"></script>
-    <script src="./vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="./vendors/Flot/jquery.flot.resize.js"></script>
-    <!-- Flot plugins -->
-    <script src="./vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="./vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="./vendors/flot.curvedlines/curvedLines.js"></script>
-    <!-- DateJS -->
-    <script src="./vendors/DateJS/build/date.js"></script>
-    <!-- JQVMap -->
-    <script src="./vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="./vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="./vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <!-- bootstrap-daterangepicker -->
+    <!-- bootstra-daterangepicker -->
     <script src="./vendors/moment/min/moment.min.js"></script>
     <script src="./vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-
+    <!-- bootstrap-wysiwyg -->
+    <script src="./vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="./vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="./vendors/google-code-prettify/src/prettify.js"></script>
+    <!-- jQuery Tags Input -->
+    <script src="./vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <!-- Switchery -->
+    <script src="./vendors/switchery/dist/switchery.min.js"></script>
+    <!-- Select2 -->
+    <script src="./vendors/select2/dist/js/select2.full.min.js"></script>
+    <!-- Parsley -->
+    <script src="./vendors/parsleyjs/dist/parsley.min.js"></script>
+    <!-- Autosize -->
+    <script src="./vendors/autosize/dist/autosize.min.js"></script>
+    <!-- jQuery autocomplete -->
+    <script src="./vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <!-- starrr -->
+    <script src="./vendors/starrr/dist/starrr.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="./build/js/custom.min.js"></script>
 
