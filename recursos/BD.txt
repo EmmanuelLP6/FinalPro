@@ -1,0 +1,76 @@
+Insert into estado values(11,'Mexico');
+Insert into estado values(12,'Guanajuato');
+
+
+insert into municipio values(11,'Valle de Bravo',11);
+insert into municipio values(12,'Aculco',11);
+insert into municipio values(13,'El Oro',11);
+insert into municipio values(14,'San Juan Teotihuacan',11);
+insert into municipio values(15,'Villa del Carbon',11);
+insert into municipio values(16,'Tepotzotlan',11);
+insert into municipio values(17,'Ixtapan',11);
+insert into municipio values(18,'Metepec',11);
+insert into municipio values(19,'Malinalco',11);
+insert into municipio values(20,'Mineral de pozoz',12);
+
+
+insert into localidad values(11,'Valle de Bravo',11);
+insert into localidad values(12,'Aculco',12);
+insert into localidad values(13,'El Oro',13);
+insert into localidad values(14,'San Juan Teotihuacan',14);
+insert into localidad values(15,'Villa del Carbon',15);
+insert into localidad values(16,'Tepotzotlan',16);
+insert into localidad values(17,'Ixtapan',17);
+insert into localidad values(18,'Metepec',18);
+insert into localidad values(19,'Malinalco',19);
+insert into localidad values(20,'Mineral de pozoz',20);
+
+
+
+
+insert into pueblo values(11,'Valle de Bravo','2019-04-15','10:30:00',1,'img/p11.jpg',' img/pp11.jpg','img/ppp11.jpg',11,11,11);
+insert into pueblo values(12,'Aculco','2019-04-14','15:40:22',1,'img/p12.jpg','img/pp12.jpg','img/ppp12.jpg',12,12 ,12);
+insert into pueblo values(13,'El Oro','2019-04-14','11:15:00',1,'img/p13.jpg','img/pp13.jpg','img/ppp13.jpg',13,13 ,13);
+insert into pueblo values(14,'San Juan Teotihuacan','2019-04-13','09:20:40',1,'img/p14.jpg',' img/pp14.jpg','img/ppp14.jpg',14,14,14);
+insert into pueblo values(15,'Villa del Carbon','2019-04-13','17:50:17',1,'img/p15.jpg',' img/pp15.jpg','img/ppp15.jpg',15,15,15);
+insert into pueblo values(16,'Tepotzotlan','2019-04-13','15:41:12',1,'img/p16.jpg','img/pp16.jpg','img/ppp16.jpg', 16,16,16);
+insert into pueblo values(17,'Ixtapan','2019-04-12','10:20:22',1,'img/p17.jpg','img/pp17.jpg','img/ppp17.jpg', 17,17,17);
+insert into pueblo values(18,'Metepec','2019-04-12','12:38:15',1,'img/p18.jpg','img/pp18.jpg','img/ppp18.jpg', 18,18,18);
+insert into pueblo values(19,'Malinalco','2019-04-12','01:18:46',1,'img/p19.jpg','img/pp19.jpg','img/ppp19.jpg', 19,19,19);
+insert into pueblo values(20,'Mineral de pozos','2019-04-12','02:49:12',1 ,'img/p20.jpg','img/pp20.jpg','img/ppp20.jpg',20,20,20);
+
+insert into razon values(11,'Bravo es una ciudad sobre el Lago Avándaro, al oeste de Ciudad de México. El lago, rodeado de montañas arboladas, es un centro de deportes acuáticos. Las calles con adoquines de la ciudad están bordeadas de edificios coloniales bien conservados. En el centro de la Plaza de la Independencia está la Iglesia de San Francisco de Asís del siglo XVII.',11);
+insert into razon values(12,'El municipio de Aculco se ubica en el altiplano mexicano, a una hora por carretera de Ciudad de México; forma parte del Estado de México y su cabecera municipal lleva el nombre oficial de Aculco de Espinoza.',12);
+insert into razon values(13,'El Oro de Hidalgo no es del náhuatl, como la mayoría de los nombres de otros municipios en el estado, sino del español, y simplemente significa "el oro". Posteriormente se le ha dado un nombre náhuatl alternativo de "Teocuitlatl".',13);
+insert into razon values(14,'Teotihuacán es un amplio complejo arqueológico mexicano al noreste de la Ciudad de México. Por el centro del lugar, que alguna vez fue una floreciente ciudad precolombina, pasa la Calzada de los Muertos. Esta une el Templo de Quetzalcóatl, la Pirámide de la Luna y la Pirámide del Sol.',14);
+insert into razon values(15,'Villa del Carbón es un pueblo y uno de los 125 municipios del Estado de México. Está situado en la parte norte del estado, justo al noroeste de la Ciudad de México.? El municipio contiene varios pueblos de origen otomí y nahua, en los que gran parte de la cultura indígena todavía persiste.',15);
+insert into razon values(16,'Es un encuentro de dos mundos, donde la influencia española erigió poemas en sus plazas, conventos y templos. Destaca el Templo de las Capuchinas, que forma parte de la Ruta de los Conventos, un recorrido reconocido por la UNESCO como Patrimonio Mundial de la Humanidad, rodeado por graneros de trigo que con los rayos de sol brillan como cabellos de oro.',16);
+insert into razon values(17,'Podrás descansar junto a la gente pescando y paseando en lancha sobre su cristalina superficie, pasear a caballo por la orilla o esperar la llegada del atardecer en otro cuerpo de agua, el Lago Cráter, cuya principal característica es que cada vez que hay un temblor o una erupción del volcán sus aguas se tiñen de rojo, también podrás descansar en sus cómodas palapas de la Isla La Angostura.',17);
+insert into razon values(18,'Metepec es una encantadora comunidad en el Estado de México llena de colores, olores y sabores del México antiguo. Quienes lo conocen terminan maravillados no sólo por sus paisajes y su arquitectura, sino por las creaciones artesanales de los indígenas que son verdaderas obras de arte que realizan los maestros alfareros.',18);
+insert into razon values(19,'Malinalco está ubicado al sur de la ciudad de Toluca de Lerdo y 52 km de la ciudad de Cuernavaca. En términos de tiempo de traslado se encuentra a una hora de la Ciudad de México a partir de la caseta México Toluca vía La Marquesa.',19);
+insert into razon values(20,'La historia de generaciones que han pisado sus tierras. Tocarás las raíces del pueblo observando las pinturas rupestres que dan fe de los primeros exploradores de Huichapan, mientras te deslumbran los vestigios de las culturas Otomí, Teotihuacana, Tolteca y Azteca, que también habitaron estas tierras y que los encontrarás en museo de Arqueología e Historia que te transportará a otros tiempos. Hasta el Convento de San Mateo hasta su plaza central que resguarda las tres iglesias del Conjunto Religioso y el Palacio Municipal.',20);
+
+
+insert into artesania values(11,'Alfareria','Barro','Artesanias autenticas de Barro.','img/art11.jpg');
+insert into artesania values(12,'Bordados','Manta','Bordados de todo tipo de vestimenta','img/art12.jpg');
+insert into artesania values(13,'Joyas','Bañadas de oro','Joyas echas a mano.','img/art13.jpg');
+insert into artesania values(14,'Artesania general','Ceramica','Esculturas, mascaras, pintura y ceramica','img/art14.jpg');
+insert into artesania values(15,'Muñecas','Tela','Muñecas Hechas a mano. Son 32 vestuarios completos y típicos de los estados de la república los que se bordan a mano en el taller de costura, entre diseños de ropa chichimeca, trajes de Colima, Durango, Puebla, Veracruz y la vestimenta de la región.','img/art15.jpg');
+insert into artesania values(16,'Manteles bordados','Tela','Tradiccion de la region','img/art16.jpg');
+insert into artesania values(17,'Rebozos','Tela','Cultura y tradicion del lugar','img/art17.jpg');
+insert into artesania values(18,'Articulos de plata','Plata','Cultura y tradicion del lugar ya que son proveedores de plata.','img/art18.jpg');
+insert into artesania values(19,'Barro','Barro','Se ofrecen jarros, cazuelas, ceniceros, juguetes y desde luego vajillas completas, en las que los artesanos graban el nombre y apellido de las familias compradoras.','img/art19.jpg');
+insert into artesania values(20,'Tapetes','Tela','Tras el paso de los años el elaborar tapetes es una tradicion','img/art20.jpg');
+
+
+insert into platillo values(11,'Trucha Arcoiris','La trucha arcoíris es un pez eurihalino de agua dulce y de mar de la familia de los salmónidos, distribuido de forma nativa por el norte del océano Pacífico, desde Japón pasando por el mar de Bering .La trucha arcoíris es un pez eurihalino de agua dulce y de mar de la familia de los salmónidos, distribuido de forma nativa por el norte del océano Pacífico, desde Japón pasando por el mar de Bering.','img/p11comida.jpg');
+insert into platillo values(12,'Barbacoa','Obtenida a partir de un Agave, sino de una planta agrupada en el genero Dasylirien. Dasylirien sp conocida entre los pobladores como Cuchara del deseirto o sereque y tiene la particularidad de sobrevivir a los cambios extremos de temparatura, es decir desde con congelados inviernos hasta los calurosos dias que se presentan.','img/p12comida.jpg ');
+insert into platillo values(13,'Caldo de patas','El caldo de pata es una sopa típica que se prepara en varios países de Latinoamérica. Esta sopa es uno de aquellos platos que o te encanta o no lo puedes ver ni en pintura. Mi recomendación es que por lo menos lo prueben antes de escoger la segunda opción.  ','img/p13comida.jpg');
+insert into platillo values(14,'Caldo de Res','Previamente desvenados, hay que rellenar los chiles con queso y freírlos en manteca. Ya partidos los jitomates, la cebolla, el ajo, el cilantro y el xoconoztle lo freiremos todo juntos y añadiremos el caldo y los chiles rellenos.Tras dejarla hervir, se echan los huevos previamente estrellados depositándolos con cuidado para que no se rompan. Se deben servir con suficiente caldo caliente.  ','img/p14comida.jpg');
+insert into platillo values(15,'Curaditos de pulque','Deshuese la pechuga y coloque una mitad en cada plato. Licue los demás ingredientes, y bañe las pechugas con la salsa en frío. Sirva acompañado de brócoli a la mantequilla.','img/p15comida.jpg ');
+insert into platillo values(16,'Quesadillas','Pelailla de cerdo, matado a pocos meses de su nacimiento y que se suele cocinar en las tahonas de pan. ','img/p16comida.jpg ');
+insert into platillo values(17,'Tiritas de pescado','se coloca la leña encendida con otra capa de madera natural para que se consuma mientras se cuece la carne; después se le coloca una pequeña rejilla hecha con ramas de árbol para poder sostener la olla con la carne.','img/p17comida.jpg ');
+insert into platillo values(18,'Chilaquiles','En una cazuela de barro, se vierte un poco de aceite y cebolla. Ahí se sofríe la carne unos minutos. Se muelen chiles, tomates, cebolla, pimienta, ajo y sal. Luego se echan a la cazuela, junto con la carne. En vez de agua, se le agrega un poco del caldo en el que se coció la iguana, para darle la textura de salsa. 10 minutos después el platillo está listo, se sirve con frijoles y tortillas.',' img/p18comida.jpg');
+insert into platillo values(19,'Pastes','Empanadas hecha a base de harina, manteca o mantequilla y sal, rellena de carne de res, papa y poro o cebolla.','img/p19comida.jpg ');
+insert into platillo values(20,'Caldo de Borrego','Se coloca la leña encendida con otra capa de madera natural para que se consuma mientras se cuece la carne; después se le coloca una pequeña rejilla hecha con ramas de árbol para poder sostener la olla con la carne.','img/p17comida.jpg');
+
